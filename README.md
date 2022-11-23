@@ -1,9 +1,11 @@
+#Utilizamos import random para acceder a la herramienta de seleción aleatoria
+
 
 import random
 ask = 'y'
-
+ask= input('you want to play  (y)es or (n)o? ' ,  )
 while ask == "y":
-        ask= input('you want to play  (y)es or (n)o? ' ,  )
+        
         print("let´s go")
         print('(r) for Rock , (p) for paper  and (s) for Scissors')
         letter = input ('Chose a letter   '   ,      )
@@ -15,7 +17,6 @@ while ask == "y":
             print ('You Choose Paper')
         else  :
             print('invalid option , try again')
-            continue
         rpr = ['r' , 'p' , 's']
         pc = random.choice(rpr)
         if  pc == 'r':
@@ -39,6 +40,7 @@ while ask == "y":
              print ('You Win!')
         if pc == 's' and letter == 'p':
             print('I WIN , U LOSE')
+        ask= input('you want to play again  (y)es or (n)o? ' ,  )
         continue
-    
-        print('El juego a terminado')
+        
+print('El juego a terminado')
